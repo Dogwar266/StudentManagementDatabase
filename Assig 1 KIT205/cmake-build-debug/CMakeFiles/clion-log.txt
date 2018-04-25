@@ -1,0 +1,4 @@
+"C:\Program Files\JetBrains\CLion 2018.1.1\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" "C:\Users\edwar\Documents\University\KIT205\Assig 1 KIT205\Assig 1 KIT205"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/edwar/Documents/University/KIT205/Assig 1 KIT205/Assig 1 KIT205/cmake-build-debug

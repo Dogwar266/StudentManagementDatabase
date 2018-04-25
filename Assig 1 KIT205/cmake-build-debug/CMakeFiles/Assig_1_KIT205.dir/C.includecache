@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/edwar/Documents/University/KIT205/Assig 1 KIT205/Assig 1 KIT205/Assig1.c
+stdio.h
+-
+stdlib.h
+-
+stringlist.h
+C:/Users/edwar/Documents/University/KIT205/Assig 1 KIT205/Assig 1 KIT205/stringlist.h
+bst.h
+C:/Users/edwar/Documents/University/KIT205/Assig 1 KIT205/Assig 1 KIT205/bst.h
+string.h
+-
+
+C:/Users/edwar/Documents/University/KIT205/Assig 1 KIT205/Assig 1 KIT205/bst.c
+bst.h
+C:/Users/edwar/Documents/University/KIT205/Assig 1 KIT205/Assig 1 KIT205/bst.h
+stdio.h
+-
+stdlib.h
+-
+
+C:/Users/edwar/Documents/University/KIT205/Assig 1 KIT205/Assig 1 KIT205/bst.h
+stringlist.h
+C:/Users/edwar/Documents/University/KIT205/Assig 1 KIT205/Assig 1 KIT205/stringlist.h
+
+C:/Users/edwar/Documents/University/KIT205/Assig 1 KIT205/Assig 1 KIT205/stringlist.c
+stringlist.h
+C:/Users/edwar/Documents/University/KIT205/Assig 1 KIT205/Assig 1 KIT205/stringlist.h
+stdlib.h
+-
+stdio.h
+-
+
+C:/Users/edwar/Documents/University/KIT205/Assig 1 KIT205/Assig 1 KIT205/stringlist.h
+

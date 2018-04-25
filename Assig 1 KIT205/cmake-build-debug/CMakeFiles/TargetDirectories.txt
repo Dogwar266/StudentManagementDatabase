@@ -1,0 +1,3 @@
+C:/Users/edwar/Documents/University/KIT205/Assig 1 KIT205/Assig 1 KIT205/cmake-build-debug/CMakeFiles/Assig_1_KIT205.dir
+C:/Users/edwar/Documents/University/KIT205/Assig 1 KIT205/Assig 1 KIT205/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/edwar/Documents/University/KIT205/Assig 1 KIT205/Assig 1 KIT205/cmake-build-debug/CMakeFiles/rebuild_cache.dir

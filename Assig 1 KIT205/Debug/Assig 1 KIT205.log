@@ -1,0 +1,29 @@
+﻿  stringlist.c
+  bst.c
+  main.c
+c:\users\edwar\documents\university\kit205\assig 1 kit205\assig 1 kit205\main.c(45): warning C4047: 'function': 'char *' differs in levels of indirection from 'char **'
+c:\users\edwar\documents\university\kit205\assig 1 kit205\assig 1 kit205\main.c(45): warning C4024: 'insert_at_front': different types for formal and actual parameter 2
+c:\users\edwar\documents\university\kit205\assig 1 kit205\assig 1 kit205\main.c(95): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1272): note: see declaration of 'scanf'
+c:\users\edwar\documents\university\kit205\assig 1 kit205\assig 1 kit205\main.c(104): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1272): note: see declaration of 'scanf'
+c:\users\edwar\documents\university\kit205\assig 1 kit205\assig 1 kit205\main.c(115): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1272): note: see declaration of 'scanf'
+c:\users\edwar\documents\university\kit205\assig 1 kit205\assig 1 kit205\main.c(121): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1272): note: see declaration of 'scanf'
+c:\users\edwar\documents\university\kit205\assig 1 kit205\assig 1 kit205\main.c(127): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(132): note: see declaration of 'strcpy'
+c:\users\edwar\documents\university\kit205\assig 1 kit205\assig 1 kit205\main.c(147): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1272): note: see declaration of 'scanf'
+c:\users\edwar\documents\university\kit205\assig 1 kit205\assig 1 kit205\main.c(153): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1272): note: see declaration of 'scanf'
+c:\users\edwar\documents\university\kit205\assig 1 kit205\assig 1 kit205\main.c(188): warning C4474: 'scanf' : too many arguments passed for format string
+  c:\users\edwar\documents\university\kit205\assig 1 kit205\assig 1 kit205\main.c(188): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\users\edwar\documents\university\kit205\assig 1 kit205\assig 1 kit205\main.c(188): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1272): note: see declaration of 'scanf'
+c:\users\edwar\documents\university\kit205\assig 1 kit205\assig 1 kit205\main.c(209): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1272): note: see declaration of 'scanf'
+c:\users\edwar\documents\university\kit205\assig 1 kit205\assig 1 kit205\main.c(111): warning C4101: 'newCourse': unreferenced local variable
+  Generating Code...
+c:\users\edwar\documents\university\kit205\assig 1 kit205\assig 1 kit205\main.c(231): warning C4716: 'menu': must return a value
+  Assig 1 KIT205.vcxproj -> C:\Users\edwar\Documents\University\KIT205\Assig 1 KIT205\Debug\Assig 1 KIT205.exe
