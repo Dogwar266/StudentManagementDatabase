@@ -5,11 +5,11 @@
 #include <string.h>
 
 /*
- * Main.c 
+ * Main.c
  * The main driver of the student management program
  * Allows the user to Add/Remove students from a Binary Search Tree
- * Allows the user to Enrol/Un-Enrol a student into a course 
- * Allows the user to output the number of students enrolled in a given course 
+ * Allows the user to Enrol/Un-Enrol a student into a course
+ * Allows the user to output the number of students enrolled in a given course
  * Allows the user to output an ordered list of students enrolled into a course
  * Allows the user to list the courses a student is currently enrolled in
  */
@@ -17,9 +17,9 @@
 
 
 
-/* Print the BST in pre-order format
- * Recursively iterates through the BST printing nodes
- */
+ /* Print the BST in pre-order format
+  * Recursively iterates through the BST printing nodes
+  */
 
 void print_pre_order_bst_node(BSTNodePtr self) {
 	if (self != NULL) {
@@ -37,22 +37,52 @@ void print_pre_order_bst(BST *self) {
 
 
 /* Traverse function for options 5 & 6 */
-
-void traverse_bst_node(BSTNodePtr self, List enrolments) {
-	if (self != NULL) {
-		traverse_bst_node(self->left, enrolments);
-		if (self->courses.head->data || self->courses.head->next->data) {
-			insert_at_front(&enrolments, &self->courses.head->data);
-			print_list(&enrolments);
-
+void traverse_bst_node(BSTNodePtr self) {
+	if (self) {
+		if (self->left) {
+			traverse_bst_node(self->left);
+		}
+		else if (self->right) {
+			traverse_bst_node(self->right);
 		}
 	}
+	return;
 }
 
-/* Wrapper function for traverse_bst_node */
+/* Traverse Wrapper Function */
 
-void traverse_bst(BST *self, List enrolments) {
-	traverse_bst_node(self->root, enrolments);
+void traverse_bst(BST* self) {
+	traverse_bst_node(self->root);
+}
+
+/* Print function for students enrolled in a given course*/
+
+void print_in_order_students(BSTNodePtr self, char* courseName) {
+	
+	ListNodePtr current = self->courses.head; // New list pointer to increment 
+
+	if (!self) {
+		return;
+		}
+
+	if (self->left) {
+		print_in_order_students(self->left, courseName); // Recursive search
+
+		while (current != NULL) { // List search
+			if (strcmp(current->data, courseName) == 0) { // String compare on the given course and students courses
+				printf("%d\n", self->data); // Output students who are enrolled
+				return;
+			}
+			current = current->next; // Incremement List Pointer
+		}
+	}
+	else if (self->right) {
+		print_in_order_students(self->right, courseName);
+		}
+}
+
+void print_in_order_students_bst(BST* self, char* courseName) {
+	print_in_order_students(self->root, courseName);
 }
 
 /* Main menu driver function 
@@ -60,8 +90,7 @@ void traverse_bst(BST *self, List enrolments) {
 */
 
 int menu(){
-	List enrolments = new_list();
-	List orderedStudents = new_list();
+	char courseName[101];
 	char course[101];
 	int sID;
 	int option;
@@ -168,7 +197,7 @@ int menu(){
 
 				if (students.root != NULL) {
 
-					traverse_bst(&students, enrolments);
+					traverse_bst(&students);
 
 				
 				}
@@ -184,19 +213,15 @@ int menu(){
 				break;
 				
 			case 6: printf("You've selected option 6\n");
+
+				if (students.root != NULL){
 				printf("Please enter a course: ");
-				scanf("&s", course);
-					
-			
-				//traverse to find students assosciated with that course
-			
-
-				//strcmp a course
-				
-
-				//display in order maybe using another linked list.... with insert_in_order
-				//insert_in_order(&orderedStudents, self->data);
-				print_list(&orderedStudents);
+				scanf("%s", courseName);
+				print_in_order_students_bst(&students, courseName);
+				}
+				else {
+					printf("There are no students in the database\n");
+				}
 				printf("\n\n");
 				break;
 
