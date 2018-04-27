@@ -29,30 +29,34 @@ void print_pre_order_bst_node(BSTNodePtr self) {
 	}
 }
 
-/* Wrapper functin for print_pre_order_bst_node */
+void count_students(BSTNodePtr self) {
 
-void print_pre_order_bst(BST *self) {
-	print_pre_order_bst_node(self->root);
-}
+	int count = 1;
 
-
-/* Traverse function for options 5 & 6 */
-void traverse_bst_node(BSTNodePtr self) {
-	if (self) {
-		if (self->left) {
-			traverse_bst_node(self->left);
-		}
-		else if (self->right) {
-			traverse_bst_node(self->right);
-		}
+	if (!self) {
+		return; 
 	}
-	return;
-}
+	ListNodePtr current = self->courses.head; // Create a new list node pointer
+	ListNodePtr prev = self->courses.head->next; // Create a prev
+	
+	if (strcmp(current->data, prev->data) == 0) {
+		count++;
+	}
+	if (self) {
+			printf("%s\t%d\n", current->data, count);
+			}
+			if (self->left) {
+				count_students(self->left);
+			}
+			else if (self->right) {
+				count_students(self->right);
+			}
+			return;
+	}
 
-/* Traverse Wrapper Function */
 
-void traverse_bst(BST* self) {
-	traverse_bst_node(self->root);
+void count_students_bst(BST* self) {
+	count_students(self->root);
 }
 
 /* Print function for students enrolled in a given course*/
@@ -79,9 +83,7 @@ void print_in_order_students(BSTNodePtr self, char* courseName) {
 			current = current->next; // Incremement List Pointer
 			
 		}
-	}
-
-		 
+	}	 
 }
 
 void print_in_order_students_bst(BST* self, char* courseName) {
@@ -93,6 +95,7 @@ void print_in_order_students_bst(BST* self, char* courseName) {
 */
 
 int menu(){
+
 	char courseName[101];
 	char course[101];
 	int sID;
@@ -200,18 +203,12 @@ int menu(){
 
 				if (students.root != NULL) {
 
-					traverse_bst(&students);
-
+					count_students_bst(&students);
 				
 				}
 				else {
 					printf("No students in the database\n");
 				}
-				//strcmp the courses in each list
-
-				//increment a counter 
-
-				//display this somehow 
 				printf("\n\n");
 				break;
 				
@@ -220,7 +217,7 @@ int menu(){
 				if (students.root != NULL){
 				printf("Please enter a course: ");
 				scanf("%s", courseName);
-				print_in_order_students_bst(&students, courseName);
+				print_in_order_students_bst(&students, courseName); // Calls print function 
 				}
 				else {
 					printf("There are no students in the database\n");
