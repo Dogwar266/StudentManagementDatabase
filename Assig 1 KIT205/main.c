@@ -58,27 +58,30 @@ void traverse_bst(BST* self) {
 /* Print function for students enrolled in a given course*/
 
 void print_in_order_students(BSTNodePtr self, char* courseName) {
-	
-	ListNodePtr current = self->courses.head; // New list pointer to increment 
-
 	if (!self) {
 		return;
-		}
+	}
+	ListNodePtr current = self->courses.head; // New list pointer to increment 
+	
 
-	if (self->left) {
-		print_in_order_students(self->left, courseName); // Recursive search
-
+	if (self) {
 		while (current != NULL) { // List search
 			if (strcmp(current->data, courseName) == 0) { // String compare on the given course and students courses
 				printf("%d\n", self->data); // Output students who are enrolled
+				if (self->left) { // checks data to the left
+					print_in_order_students(self->left, courseName); // Recursive search
+				}
+				else if (self->right) { // checks data to the right
+					print_in_order_students(self->right, courseName);
+				}
 				return;
 			}
 			current = current->next; // Incremement List Pointer
+			
 		}
 	}
-	else if (self->right) {
-		print_in_order_students(self->right, courseName);
-		}
+
+		 
 }
 
 void print_in_order_students_bst(BST* self, char* courseName) {
